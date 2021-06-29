@@ -1,0 +1,10 @@
+node_modules/
+dist/
+assets/
+
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+.git
+.gitignore
