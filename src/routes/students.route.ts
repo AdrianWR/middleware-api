@@ -1,7 +1,11 @@
 import { Router, Request, Response } from "express";
 
-export const router = Router();
+export const studentsRouter = Router();
 
-router.get("/students", async (req: Request, res: Response) => {
+studentsRouter.get("/students", async (req: Request, res: Response) => {
     return res.status(200).send(`Getting data of all students`);
+});
+
+studentsRouter.get("/student", async (req: Request, res: Response) => {
+    res.status(201).send("banana");
 });
