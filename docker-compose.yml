@@ -13,4 +13,5 @@ services:
       - app
 networks:
   app:
+    name: app
     driver: bridge

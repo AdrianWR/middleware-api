@@ -2,7 +2,7 @@ FROM node:16-alpine as builder
 
 WORKDIR /app
 
-COPY package*.json .
+COPY package*.json ./
 RUN npm install
 
 COPY . .
@@ -12,8 +12,8 @@ FROM node:16-alpine
 
 WORKDIR /usr/src/app
 
-COPY --from=builder app/dist dist
-COPY package*.json .
+COPY --from=builder app/dist dist/
+COPY package*.json ./
 RUN npm install --production
 
 ENTRYPOINT ["npm", "start"]
